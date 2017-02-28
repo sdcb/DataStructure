@@ -9,6 +9,8 @@ namespace DataStructure.LinkedListDetails
     {
         public T Value;
 
+        public Node<T> Prev;
+
         public Node<T> Next;
     }
 

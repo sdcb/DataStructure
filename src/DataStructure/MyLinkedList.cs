@@ -39,6 +39,7 @@ namespace DataStructure
             {
                 Tail.Next = node;
             }
+            node.Prev = Tail;
             Tail = node;
             Count += 1;
         }
@@ -49,12 +50,12 @@ namespace DataStructure
             {
                 throw new InvalidOperationException("List cannot remove first when empty.");
             }
-            Count -= 1;
             if (Head == Tail)
             {
                 Tail = null;
             }
             Head = Head.Next;
+            Count -= 1;
         }
 
         public void RemoveLast()
@@ -63,8 +64,7 @@ namespace DataStructure
             {
                 throw new InvalidOperationException("List cannot remove last when empty.");
             }
-            Count -= 1;
-            if (Head == Tail)
+            if (Count == 1)
             {
                 Head = null;
                 Tail = null;
@@ -79,6 +79,27 @@ namespace DataStructure
                 Tail = traveler;
                 Tail.Next = null;
             }
+            Count -= 1;
+        }
+
+        public bool RemoveElement(T v)
+        {
+            var traveler = Head;
+            if (traveler == null)
+            {
+                return false;
+            }
+            while (traveler != Tail)
+            {
+                if (traveler.Value.Equals(v))
+                {
+                    traveler.Prev.Next = traveler.Next;
+                    traveler.Next.Prev = traveler.Prev;
+                    return true;
+                }
+                traveler = traveler.Next;
+            }
+            return false;
         }
 
         public IEnumerator<T> GetEnumerator()

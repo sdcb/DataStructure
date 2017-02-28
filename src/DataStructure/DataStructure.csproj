@@ -13,8 +13,4 @@
     <OutputTypeEx>library</OutputTypeEx>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="MyList\" />
-  </ItemGroup>
-
 </Project>
