@@ -32,7 +32,7 @@ namespace DataStructure.LinkedList
             var node = Node.Create(item);
             if (Count == 0)
             {
-                Head = node;           
+                Head = node;
             }
             else
             {
@@ -42,8 +42,42 @@ namespace DataStructure.LinkedList
             Count += 1;
         }
 
-        public void RemoteLast()
+        public void RemoveFirst()
         {
+            if (Count == 0)
+            {
+                throw new InvalidOperationException("List cannot remove first when empty.");
+            }
+            Count -= 1;
+            if (Head == Tail)
+            {
+                Tail = null;
+            }
+            Head = Head.Next;
+        }
+
+        public void RemoveLast()
+        {
+            if (Count == 0)
+            {
+                throw new InvalidOperationException("List cannot remove last when empty.");
+            }
+            Count -= 1;
+            if (Head == Tail)
+            {
+                Head = null;
+                Tail = null;
+            }
+            else
+            {
+                var traveler = Head;
+                while (traveler.Next != Tail)
+                {
+                    traveler = traveler.Next;
+                }
+                Tail = traveler;
+                Tail.Next = null;
+            }
         }
 
         public IEnumerator<T> GetEnumerator()
