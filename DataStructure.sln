@@ -1,20 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4CB9C5CC-181F-4E44-9396-D86FE885DFC3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6D383B57-F790-4A6C-88A7-0BB94759229D}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DataStructure", "src\DataStructure\DataStructure.xproj", "{CE977032-4459-4AA8-B292-59ABEAA661BC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{70650B65-ADA2-4A01-9976-810DF062858F}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DataStructure.test", "DataStructure.test\DataStructure.test.xproj", "{60CF2654-1A90-48E3-9BA9-B3EA3576D23E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure", "src\DataStructure\DataStructure.csproj", "{CE977032-4459-4AA8-B292-59ABEAA661BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructure.test", "DataStructure.test\DataStructure.test.csproj", "{60CF2654-1A90-48E3-9BA9-B3EA3576D23E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
