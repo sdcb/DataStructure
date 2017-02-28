@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DataStructure.LinkedListDetails;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DataStructure.LinkedList
+namespace DataStructure
 {
     public class MyLinkedList<T> : IEnumerable<T> where T : IEquatable<T>
     {

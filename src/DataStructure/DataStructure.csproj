@@ -3,13 +3,18 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.0</TargetFramework>
     <AssemblyName>DataStructure</AssemblyName>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <PackageId>DataStructure</PackageId>
     <RuntimeFrameworkVersion>1.0.3</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <OutputTypeEx>library</OutputTypeEx>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="MyList\" />
+  </ItemGroup>
 
 </Project>
